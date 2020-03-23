@@ -2,27 +2,27 @@
 #include <vector>
 using namespace std;
 
-template <class T>
+ 
 struct Node{
     
-    T data;
+    char data;
     Node * next;
     
 };
 
-template <class T>
+
 class CharLinkedList {
 private:
-    Node<char> * head;
-    Node<char> * tail;
+    Node * head;
+    Node * tail;
 public:
     CharLinkedList(){
         head = NULL;
         tail = NULL;
     }
     
-    void Add(T c){
-        Node<char> * thenodeiwanttoadd = new Node<char>;
+    void Add(char c){
+        Node* thenodeiwanttoadd = new Node;
         thenodeiwanttoadd->data = c;
         thenodeiwanttoadd->next = NULL;
         
@@ -43,7 +43,7 @@ public:
  
    
     void Print(){
-        Node<char> * tempHead = head;
+        Node* tempHead = head;
         while (tempHead != NULL){
             cout << tempHead->data;
             tempHead= tempHead->next;
@@ -59,7 +59,7 @@ public:
 
 int main(){
     
-    CharLinkedList<char> L;
+    CharLinkedList L;
     L.Add('c');
     L.Add('a');
     L.Add('f');
